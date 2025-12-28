@@ -5,7 +5,7 @@ services:
   mysql:
     image: mysql:8.0
     platform: linux/arm64
-    container_name: order-mysql
+    container_name: jp-order-mysql
     ports:
       - "3306:3306"
     environment:
@@ -20,7 +20,7 @@ services:
   # Redis 缓存
   redis:
     image: redis:7-alpine
-    container_name: order-redis
+    container_name: jp-order-redis
     ports:
       - "6379:6379"
     command: redis-server --appendonly yes
